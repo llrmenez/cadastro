@@ -11,6 +11,7 @@ p {
 h1 {
   text-align: center;
   color: #333;
+  height: 150px;
 }
 
 h2 {
@@ -49,4 +50,10 @@ strong {
 .banner {
   width: 100%;
   height: auto;
+}
+
+.principal {
+    background: rgb(77, 77, 79);
+    padding: 150px;     
+
 }
