@@ -1,0 +1,388 @@
+/* ----------------------------------------------------------- */
+/* 1. RESET BÁSICO E ESTILOS GLOBAIS                          */
+/* ----------------------------------------------------------- */
+* {
+  /* Reseta margens e preenchimentos padrão do navegador */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura do elemento */
+}
+
+body {
+  font-family: "Arial", sans-serif; /* Consistência na fonte */
+  background-color: #f7f7f7; /* Cor de fundo mais clara e neutra */
+  color: #333; /* Cor de texto padrão mais escura para melhor legibilidade */
+  line-height: 1.6; /* Melhora a leitura dos parágrafos */
+  font-size: 16px; /* Tamanho base da fonte */
+}
+
+/* ----------------------------------------------------------- */
+/* 2. CABEÇALHO E NAVEGAÇÃO                                   */
+/* ----------------------------------------------------------- */
+header {
+  background-color: #1a1a1a; /* Fundo escuro para o cabeçalho, comum em barbearias */
+  padding: 20px 0; /* Mais padding em cima/baixo */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar o cabeçalho */
+  position: sticky; /* Fixa o cabeçalho no topo ao rolar */
+  top: 0;
+  z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+.menu-navegacao {
+  /* Usando a nova classe do HTML */
+  display: flex; /* Flexbox para alinhar logo e menu */
+  justify-content: space-between; /* Espaça logo e menu nas pontas */
+  align-items: center; /* Alinha verticalmente no centro */
+  max-width: 1200px; /* Largura máxima para o conteúdo do menu */
+  margin: 0 auto; /* Centraliza o menu na página */
+  padding: 0 20px; /* Padding nas laterais para telas menores */
+}
+
+.logo-container img {
+  /* Usando a nova classe para o contêiner da logo */
+  width: 120px; /* Tamanho da logo ajustado para ser visível, mas não dominante */
+  height: auto;
+  border-radius: 50%; /* Se a logo for circular ou para arredondar */
+  /* Remove 'display: block' e 'margin: 0 auto' pois o flexbox já cuida do alinhamento */
+}
+
+.menu-links {
+  /* Usando a nova classe do HTML para a UL */
+  list-style: none; /* Remove bolinhas da lista */
+  display: flex; /* Flexbox para alinhar os itens do menu horizontalmente */
+  gap: 30px; /* Espaço entre os itens do menu */
+}
+
+.menu-links li a {
+  /* Estilos para os links do menu */
+  text-decoration: none; /* Remove sublinhado */
+  color: #f0f0f0; /* Cor clara para o texto do menu */
+  font-size: 1.1em; /* Tamanho da fonte ligeiramente maior */
+  font-weight: bold; /* Deixa o texto do menu em negrito */
+  padding: 5px 0; /* Padding para a área de clique */
+  transition: color 0.3s ease; /* Suaviza a transição de cor no hover */
+}
+
+.menu-links li a:hover {
+  color: #ff9900; /* Cor de destaque no hover (laranja ou dourado para barbearia) */
+}
+
+/* ----------------------------------------------------------- */
+/* 3. BANNER PRINCIPAL                                        */
+/* ----------------------------------------------------------- */
+.banner-principal {
+  /* Usando a nova classe do HTML */
+  width: 100%; /* Ocupa 100% da largura da tela */
+  height: 450px; /* Altura fixa para o banner */
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer, cortando o excesso */
+  display: block; /* Remove possíveis espaços extras abaixo da imagem */
+  margin-bottom: 40px; /* Espaçamento abaixo do banner */
+  filter: brightness(
+    0.7
+  ); /* Escurece um pouco o banner para o texto se destacar, se houver */
+}
+
+/* ----------------------------------------------------------- */
+/* 4. CONTEÚDO PRINCIPAL (SEÇÕES)                             */
+/* ----------------------------------------------------------- */
+.conteudo-principal {
+  /* A tag <main> que chamamos de .conteudo-principal */
+  max-width: 900px; /* Largura máxima para o conteúdo principal, centralizando-o */
+  margin: 40px auto; /* Centraliza a seção e adiciona margem em cima/baixo */
+  padding: 20px; /* Padding interno para o conteúdo */
+  background-color: #fff; /* Fundo branco para as seções de conteúdo */
+  border-radius: 8px; /* Cantos arredondados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+}
+
+/* Estilo geral para todas as seções */
+section {
+  padding: 30px 0; /* Espaçamento interno para todas as seções */
+  margin-bottom: 30px; /* Espaçamento entre as seções */
+}
+
+/* Estilizando o H1, que agora está dentro de .secao-introducao */
+.secao-introducao h1 {
+  font-size: 2.8em; /* Tamanho maior para o título principal */
+  color: #222; /* Cor mais escura */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  text-align: center;
+  height: auto; /* Remove a altura fixa para o H1 */
+  padding: 0; /* Remove padding que pode ter vindo de 'div' */
+}
+
+/* Estilizando o H2 */
+h2 {
+  font-size: 2em;
+  color: #444;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ff9900; /* Linha de destaque para H2 */
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* Estilizando o H3 */
+h3 {
+  font-size: 1.5em;
+  color: #555;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  text-align: left; /* Títulos de subtópicos alinhados à esquerda */
+}
+
+/* Parágrafos gerais */
+p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify; /* Justifica o texto para melhor leitura */
+}
+
+/* Estilo para a missão (em) */
+.texto-missao {
+  /* Usando a classe mais específica */
+  font-size: 1.3em; /* Tamanho da fonte ajustado */
+  color: #007bff; /* Uma cor azul mais vibrante para destaque */
+  font-style: italic; /* Mantém o itálico */
+  text-align: center;
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #e9f5ff; /* Fundo claro para a missão */
+  border-left: 5px solid #007bff; /* Borda lateral para destaque */
+  border-radius: 5px;
+}
+
+strong {
+  color: #007bff; /* Cor consistente com a missão ou um tom mais escuro */
+  font-weight: bold;
+}
+
+/* ----------------------------------------------------------- */
+/* 5. SEÇÃO DE BENEFÍCIOS (usando Flexbox)                    */
+/* ----------------------------------------------------------- */
+.secao-porque-escolher {
+  /* Nova classe do HTML */
+  display: flex; /* Transforma em Flex Container */
+  flex-wrap: wrap; /* Permite que os itens quebrem linha */
+  gap: 30px; /* Espaço entre os itens de benefício */
+  justify-content: center; /* Centraliza os itens quando há poucos */
+}
+
+.item-beneficio {
+  /* Nova classe do HTML para cada benefício */
+  background-color: #fcfcfc;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 25px;
+  flex: 1 1 calc(33% - 40px); /* Ocupa 33% da largura com um pouco de margem (para 3 colunas) */
+  min-width: 280px; /* Largura mínima para o item */
+  text-align: center; /* Centraliza o texto dentro do item */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease; /* Efeito ao passar o mouse */
+}
+
+.item-beneficio:hover {
+  transform: translateY(-5px); /* Levanta o card um pouco no hover */
+}
+
+/* ----------------------------------------------------------- */
+/* 6. SEÇÃO DE SERVIÇOS                                       */
+/* ----------------------------------------------------------- */
+.secao-servicos {
+  /* Nova classe do HTML */
+  background-color: #fcfcfc;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.lista-servicos {
+  /* Nova classe para a UL de serviços */
+  list-style: none; /* Remove as bolinhas */
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: grid; /* Usando Grid para o layout da lista */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* 2 ou 3 colunas, adaptável */
+  gap: 15px; /* Espaço entre os itens da grid */
+}
+
+.item-servico {
+  /* Nova classe para os itens LI de serviço */
+  background-color: #e9f5ff; /* Fundo suave para cada item de serviço */
+  padding: 15px 20px;
+  border-left: 4px solid #007bff; /* Borda esquerda para destaque */
+  border-radius: 5px;
+  font-size: 1.1em;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.item-servico:hover {
+  background-color: #d4edff; /* Cor mais escura no hover */
+}
+
+.servicos-premium {
+  /* Contêiner para o texto de serviços premium */
+  background-color: #fff8e1; /* Fundo amarelo suave para destacar */
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px dashed #ffd700; /* Borda tracejada para chamar atenção */
+  margin-top: 30px;
+  text-align: center;
+}
+
+.servicos-premium h3 {
+  /* Estilo específico para o H3 dentro de serviços premium */
+  color: #d4ac0d; /* Cor dourada para o título premium */
+}
+
+/* ----------------------------------------------------------- */
+/* 7. IMAGEM DECORATIVA/GALERIA                               */
+/* ----------------------------------------------------------- */
+.secao-galeria {
+  /* Nova seção para a imagem */
+  text-align: center; /* Centraliza a imagem */
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.imagem-decorativa {
+  /* Usando a nova classe do HTML */
+  max-width: 80%; /* Garante que a imagem não seja maior que 80% do contêiner */
+  height: auto;
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte para destaque */
+  display: block; /* Garante que 'margin: 0 auto' funcione para centralizar */
+  margin: 0 auto;
+}
+
+/* ----------------------------------------------------------- */
+/* 8. RODAPÉ                                                  */
+/* ----------------------------------------------------------- */
+.rodape {
+  /* Nova classe para o rodapé */
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 50px; /* Espaço do conteúdo principal */
+  font-size: 0.9em;
+}
+
+/* ----------------------------------------------------------- */
+/* 9. LINHAS SEPARADORAS                                      */
+/* ----------------------------------------------------------- */
+.separador {
+  /* Nova classe para as HRs */
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0)
+  );
+  margin: 40px auto; /* Centraliza e dá espaçamento */
+  max-width: 80%;
+}
+
+/* ----------------------------------------------------------- */
+/* 10. ESTILOS REMOVIDOS/AJUSTADOS DO SEU CÓDIGO ORIGINAL     */
+/* ----------------------------------------------------------- */
+/*
+- 'div { margin: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }':
+  Muito genérico, afetava todas as divs e dificultava o controle. Preferimos classes específicas.
+- '#missão { font-size: 30px; text-align: center; }':
+  Foi substituído por '.texto-missao' com estilos mais detalhados e integrados.
+- '.principal { background: rgb(77, 77, 79); padding: 150px; }':
+  Substituído por '.conteudo-principal' com background branco, padding e shadow mais adequados para o design proposto.
+- 'ul { display: inline-block; vertical-align: top; width: 30%; }':
+  Esta regra era muito genérica para 'ul' e estava causando problemas de layout. Agora, usamos classes específicas como '.menu-links' (para o menu) e '.lista-servicos' (para os serviços) com Flexbox/Grid para controle preciso.
+- '.beneficios { background: rgb(243, 240, 240); padding: 10px; margin-top: auto; }':
+  Renomeado para '.secao-porque-escolher' e '.item-beneficio' com Flexbox para um layout de colunas.
+- '.imagembeneficios':
+  Corrigi o erro de digitação (faltava o hífen) e usei a nova classe '.imagem-decorativa' com estilos melhorados.
+- '.menu-itens li a { display: flex; justify-content: center; font-size: 15px; gap: 20px; }':
+  A regra de 'display: flex' estava no 'a', mas o Flexbox deveria estar no 'ul' pai para alinhar os 'li'. Ajustei para '.menu-links'.
+*/
+
+/* ----------------------------------------------------------- */
+/* 11. RESPONSIVIDADE BÁSICA (Media Queries)                  */
+/* ----------------------------------------------------------- */
+@media (max-width: 768px) {
+  .menu-navegacao {
+    flex-direction: column; /* Empilha logo e menu em telas menores */
+    padding: 15px;
+  }
+
+  .menu-links {
+    margin-top: 15px;
+    flex-direction: column; /* Empilha os itens do menu em telas menores */
+    gap: 10px;
+    text-align: center; /* Centraliza o texto dos links */
+  }
+
+  .banner-principal {
+    height: 300px; /* Altura menor para o banner em telas menores */
+  }
+
+  .conteudo-principal {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .secao-introducao h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  .secao-porque-escolher {
+    flex-direction: column; /* Empilha os cards de benefício em telas menores */
+    gap: 20px;
+  }
+
+  .item-beneficio {
+    flex: 1 1 100%; /* Ocupa 100% da largura em telas menores */
+  }
+
+  .lista-servicos {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+  }
+
+  .imagem-decorativa {
+    max-width: 95%; /* Aumenta a largura da imagem em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .logo-container img {
+    width: 100px;
+  }
+
+  .menu-links li a {
+    font-size: 1em;
+  }
+
+  .banner-principal {
+    height: 250px;
+  }
+
+  .secao-introducao h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+}

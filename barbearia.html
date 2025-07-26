@@ -1,93 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="barber.css" />
-    <title>barbearia</title>
-</head>
+    <link rel="stylesheet" href="css/barber.css" />
+    <title>Alarcon Barber Club - Sua Barbearia de Confiança</title>
+  </head>
 
-<body>
-    <img class="banner" src="banner.jpg" alt="Banner da Barbearia Alarcon Barber Club" />
+  <body>
     <header>
-        <div principal>
-            <h1>Bem-vindo à Barbearia Alarcon Barber Club</h1>
-            <p>
-                Localizada no coração da cidade, a
-                <strong> Alarcon Barber Club </strong> une tradição, sofisticação e
-                atitude em um espaço pensado especialmente para quem valoriza estilo,
-                conforto e excelência.
-            </p>
-            <p>
-                Desde a sua fundação em 2020, nos tornamos referência no mercado ao
-                oferecer uma experiência completa e um cuidado diferênciado para o
-                universo masculino. Muito mais do que cortes e barbas, entregamos
-                confiança, autenticidade e bem-estar a cada cliente que passa por nossas
-                cadeiras. Aqui, cada detalhe importa — e cada cliente é único.
-            </p>
-            <h2>✂️ Nossa Missão</h2>
-            <p id="Missão">
-                <em>
-                    “Proporcionar autoestima e qualidade de vida aos nossos clientes, por
-                    meio de um atendimento personalizado, serviços de alto padrão e um
-                    ambiente que inspira confiança e estilo.”
-                </em>
-            </p>
+      <nav class="menu-navegacao">
+        <div class="logo-container">
+          <img
+            src="imagens/logo.jpg"
+            alt="Logotipo da Barbearia Alarcon Barber Club - Tesoura e Navalha"
+          />
         </div>
-        <div class="beneficios">
-            <h2>💈 Por que escolher a Alarcon?</h2>
-            <h3>Profissionais Especializados</h3>
-            <p>
-                Nossa equipe é formada por barbeiros experientes, constantemente
-                atualizados nas tendências da moda e técnicas modernas de corte, barba e
-                cuidados com o cabelo.
-            </p>
-            <h3>Ambiente Exclusivo e Confortável</h3>
-            <p>
-                A Barbearia Alarcon foi projetada para ser o seu refúgio urbano. Um
-                espaço onde você pode relaxar, conversar, tomar um café ou até mesmo uma
-                cerveja artesanal, enquanto cuida da sua imagem.
-            </p>
-            <h3>Atendimento de Excelência</h3>
-            <p>
-                Prezamos por um serviço rápido, pontual e impecável. Aqui, você será
-                sempre bem-vindo e tratado com respeito e cordialidade — como um
-                verdadeiro parceiro da casa.
-            </p>
-        </div>
-        <div class="servicos">
-            <h2>💇‍♂️ Nossos Serviços</h2>
-            <p>
-                Oferecemos uma ampla gama de serviços, desde cortes clássicos e modernos
-                até cuidados especiais com a barba e cabelo. Confira abaixo alguns dos
-                nossos principais serviços:
-            </p>
-            <ul>
-                <li>Corte de cabelo masculino</li>
-                <li>Barba completa com toalha quente</li>
-                <li>Design de sobrancelhas</li>
-                <li>Hidratação capilar</li>
-                <li>Coloração</li>
-                <li>Massagem relaxante</li>
-            </ul>
-        <h3>Serviços Premium</h3>
+        <ul class="menu-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre-nos">Sobre Nós</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#agendamento">Agendamento</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <img
+      class="banner-principal"
+      src="imagens/banner.jpg"
+      alt="Interior elegante da Barbearia Alarcon Barber Club"
+    />
+
+    <main class="conteudo-principal">
+      <section id="inicio" class="secao-introducao">
+        <h1>Bem-vindo à Barbearia Alarcon Barber Club</h1>
         <p>
-            Cortes personalizados, barba completa com toalha quente, design de
-            sobrancelhas, hidratação capilar, coloração, massagem relaxante e muito mais.
-            Tudo para elevar sua experiência ao máximo.
+          Localizada no coração da cidade, a
+          <strong>Alarcon Barber Club</strong> une tradição, sofisticação e
+          atitude em um espaço pensado especialmente para quem valoriza estilo,
+          conforto e excelência.
         </p>
-            <ul>
-                <li>Cortes de cabelo personalizados</li>
-                <li>Barba completa com toalha quente</li>
-                <li>Design de sobrancelhas</li>
-                <li>Hidratação capilar</li>
-                <li>Coloração</li>
-                <li>Massagem relaxante</li>
-            </ul>
+        <p>
+          Desde a sua fundação em 2020, nos tornamos referência no mercado ao
+          oferecer uma experiência completa e um cuidado diferenciado para o
+          universo masculino. Muito mais do que cortes e barbas, entregamos
+          confiança, autenticidade e bem-estar a cada cliente que passa por
+          nossas cadeiras. Aqui, cada detalhe importa — e cada cliente é único.
+        </p>
+        <h2>✂️ Nossa Missão</h2>
+        <p id="missao" class="texto-missao">
+          <em>
+            “Proporcionar autoestima e qualidade de vida aos nossos clientes,
+            por meio de um atendimento personalizado, serviços de alto padrão e
+            um ambiente que inspira confiança e estilo.”
+          </em>
+        </p>
+      </section>
+
+      <hr class="separador" />
+
+      <section id="sobre-nos" class="secao-porque-escolher">
+        <h2>💈 Por que escolher a Alarcon?</h2>
+        <div class="item-beneficio">
+          <h3>Profissionais Especializados</h3>
+          <p>
+            Nossa equipe é formada por barbeiros experientes, constantemente
+            atualizados nas tendências da moda e técnicas modernas de corte,
+            barba e cuidados com o cabelo.
+          </p>
         </div>
-</body>
+        <div class="item-beneficio">
+          <h3>Ambiente Exclusivo e Confortável</h3>
+          <p>
+            A Barbearia Alarcon foi projetada para ser o seu refúgio urbano. Um
+            espaço onde você pode relaxar, conversar, tomar um café ou até mesmo
+            uma cerveja artesanal, enquanto cuida da sua imagem.
+          </p>
+        </div>
+        <div class="item-beneficio">
+          <h3>Atendimento de Excelência</h3>
+          <p>
+            Prezamos por um serviço rápido, pontual e impecável. Aqui, você será
+            sempre bem-vindo e tratado com respeito e cordialidade — como um
+            verdadeiro parceiro da casa.
+          </p>
+        </div>
+      </section>
 
-<div><img src="beneficios.jpg" alt=""></div>
+      <hr class="separador" />
 
+      <section id="servicos" class="secao-servicos">
+        <h2>💇‍♂️ Nossos Serviços</h2>
+        <p>
+          Oferecemos uma ampla gama de serviços, desde cortes clássicos e
+          modernos até cuidados especiais com a barba e cabelo. Confira abaixo
+          alguns dos nossos principais serviços:
+        </p>
+        <ul class="lista-servicos">
+          <li class="item-servico">Corte de cabelo masculino</li>
+          <li class="item-servico">Barba completa com toalha quente</li>
+          <li class="item-servico">Design de sobrancelhas</li>
+          <li class="item-servico">Hidratação capilar</li>
+          <li class="item-servico">Coloração</li>
+          <li class="item-servico">Massagem relaxante</li>
+        </ul>
+
+        <div class="servicos-premium">
+          <h3>Serviços Premium</h3>
+          <p>
+            Cortes personalizados, barba completa com toalha quente, design de
+            sobrancelhas, hidratação capilar, coloração, massagem relaxante e
+            muito mais. Tudo para elevar sua experiência ao máximo.
+          </p>
+        </div>
+      </section>
+
+      <hr class="separador" />
+
+      <section class="secao-galeria">
+        <img
+          class="imagem-decorativa"
+          src="imagens/beneficios.jpg"
+          alt="Homem sendo atendido em uma barbearia moderna"
+        />
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>&copy; 2025 Alarcon Barber Club. Todos os direitos reservados.</p>
+    </footer>
+  </body>
 </html>
