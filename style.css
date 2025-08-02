@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+}
+
+div.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 100px;
+  background-color: gray;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: auto;
+  padding: 100px 100px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4c66af;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.titulo {
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.ja-tenho-conta {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}

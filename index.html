@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cadastro - Formulário</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/submit" class="formulario" method="POST">
+            <h1 class="titulo">Cadastre-se</h1>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required placeholder="Digite seu nome" />
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail" />
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required placeholder="Digite sua senha" />
+
+            <button type="submit">Cadastrar</button>
+            <p class="ja-tenho-conta">
+                Já tem uma conta? <a href="/login">Entrar</a>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>
